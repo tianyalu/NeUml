@@ -1,0 +1,2 @@
+rootProject.name='NeUml'
+include ':app'
