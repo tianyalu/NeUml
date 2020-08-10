@@ -1,28 +1,40 @@
-# `UML` 之`PowerDesigner`正向工程与逆向工程
+# `UML`建模之`PowerDesigner`建模
 
-UML建模之PowerDesign建模
 
-`UML`的正向工程和逆向工程是相对于`PowerDesigner`而言的，所以从`IDE`导入`PowerDesigner`称为逆向工程，从`PowerDesigner`导出`Java`文件称为正向工程。
+[TOC]
+`Power Designer`是`Sybase`公司的`CASE`工具集，使用它可以方便地对管理信息系统进行分析设计，它几乎包括了数据库模型设计的全过程。利用`PowerDesigner`可以制作数据流程图、概念数据模型、物理数据模型，还可以对数据仓库制作结构模型，也能对团队设计模型进行控制。
 
-逆向工程：
+可以从这里下载 [PD16.5.zip](https://pan.baidu.com/s/1f85xtxSuIWAiYa8rVqXU4Q) ( yd66 ) 。
+
+## 一、`UML` 之`PowerDesigner`正向工程与逆向工程
+
+`UML`建模的正向工程和逆向工程是相对于`PowerDesigner`而言的，所以从`IDE`导入`PowerDesigner`称为逆向工程，从`PowerDesigner`导出`Java`文件称为正向工程。
+
+### 1.1 逆向工程
 
 ![image](https://github.com/tianyalu/NeUml/raw/master/show/reverse_project.png)
 
-逆向工程流程：
+#### 1.1.1 逆向工程流程
 
 ![image](https://github.com/tianyalu/NeUml/raw/master/show/reverse_process.png)
 
-在`IDE`中新建一些类文件，然后按照上述步骤导入类文件，就可以得到下图的结果；编辑 --> 导出图像 可以得到下图中右侧的`UNL`类图。
+#### 1.1.2 逆向工程结果
 
-![image](https://github.com/tianyalu/NeUml/raw/master/show/uml_object.png)
+在`IDE`中新建一些类文件，然后按照上述步骤导入类文件，就可以得到下图的结果：
 
-正向工程：
+![image](https://github.com/tianyalu/NeUml/raw/master/show/uml_object.png)  
 
-![image](https://github.com/tianyalu/NeUml/raw/master/show/forward_project.png)
+点击 编辑 --> 导出图像 可以得到上图中右侧的`UNL`类图。
 
-正向工程流程：
+### 1.2 正向工程
 
-![image](https://github.com/tianyalu/NeUml/raw/master/show/forward_process.png)
+![image](https://github.com/tianyalu/NeUml/raw/master/show/forward_project.png)  
+
+#### 1.2.1 正向工程流程
+
+![image](https://github.com/tianyalu/NeUml/raw/master/show/forward_process.png)  
+
+#### 1.2.2 正向工程结果
 
 按照上述流程操作后会得到`Java`类文件，但是文件中会有`OID`，如下所示：
 
@@ -61,11 +73,11 @@ public class BaseEntity {
 }
 ```
 
+#### 1.2.3 删除`OID`
 
+删除`oid`步骤如下：
 
-删除`oid`步骤：
-
-语言--> Edit Current Object Language --> Generation --> Options --> GenerateOID ，值改为“否”就可以了。
+语言--> `Edit Current Object Language` --> `Generation` -->` Options` --> `GenerateOID` ，值改为“否”就可以了。
 
 ![image](https://github.com/tianyalu/NeUml/raw/master/show/delete_oid.png)
 
@@ -98,38 +110,32 @@ public class BaseEntity {
 
 ```
 
-二、关系画法
+## 二、关系画法
 
 关系包括：依赖、泛化、关联、实现等。
 
-2.1 依赖关系（A持有B的引用）
+### 2.1 依赖关系（A持有B的引用）
 
 ![image](https://github.com/tianyalu/NeUml/raw/master/show/dependence.png)
 
 
 
-2.2 泛化关系（继承`extend`）
+### 2.2 泛化关系（继承`extend`）
 
-![image](https://github.com/tianyalu/NeUml/raw/master/show/generalization.png)
+![image](https://github.com/tianyalu/NeUml/raw/master/show/generalization.png)  
 
-
-
-2.3 关联关系（单向/双向/自关联）
+### 2.3 关联关系（单向/双向/自关联）
 
 ![image](https://github.com/tianyalu/NeUml/raw/master/show/association.png)
 
-2.4 实现关系（`implement`）
+### 2.4 实现关系（`implement`）  
 
-![image](https://github.com/tianyalu/NeUml/raw/master/show/realization.png)
+![image](https://github.com/tianyalu/NeUml/raw/master/show/realization.png)  
 
+### 2.5 聚合关系（整体和部分可以分开）  
 
+![image](https://github.com/tianyalu/NeUml/raw/master/show/aggregation.png)  
 
-2.5 聚合关系（整体和部分可以分开）
+### 2.6 组合关系（整体和部分不能分开）  
 
-![image](https://github.com/tianyalu/NeUml/raw/master/show/aggregation.png)
-
-
-
-2.6 组合关系（整体和部分不能分开）
-
-![image](https://github.com/tianyalu/NeUml/raw/master/show/composition.png)
+![image](https://github.com/tianyalu/NeUml/raw/master/show/composition.png)  
